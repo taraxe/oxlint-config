@@ -15,5 +15,5 @@ npm test   # node verifier.mjs : règles triées, toutes en "error", toutes reco
 - Une règle du preset est toujours `"error"`, et les règles restent triées (règles sans préfixe d'abord, puis par plugin). `npm test` le vérifie.
 - Ne pas réactiver une catégorie d'oxlint, ni une règle de la table « Règles écartées après examen » du README, sans accord explicite.
 - Avant de proposer une règle : la lier dans les trois projets (`node_modules/@taraxe/oxlint-config`) et lancer leur lint. Dire combien de signalements elle produit dans chacun.
-- Une version = une ligne dans `CHANGELOG.md`, la version de `package.json`, puis le tag `v<version>` posé après la fusion. Les projets épinglent un tag, jamais `main`.
+- Une version = une ligne dans `CHANGELOG.md`, la version de `package.json`, puis le tag `v<version>` posé après la fusion. Les projets épinglent un commit (archive HTTPS, voir le README), jamais `main`.
 - Commits en français.

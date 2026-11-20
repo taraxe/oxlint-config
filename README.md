@@ -8,8 +8,10 @@ Les règles [oxlint](https://oxc.rs/docs/guide/usage/linter) communes aux projet
 ## Installation
 
 ```sh
-npm install -D github:taraxe/oxlint-config#v0.1.0 oxlint@^1.94.0 oxlint-tsgolint
+npm install -D "@taraxe/oxlint-config@https://codeload.github.com/taraxe/oxlint-config/tar.gz/<commit>" oxlint@^1.94.0 oxlint-tsgolint
 ```
+
+`<commit>` est le SHA complet du commit voulu (ou un tag `v<version>`). L'archive HTTPS s'installe sans Git ni clé SSH, ce qui compte pour les builds Cloudflare ; `github:taraxe/oxlint-config#…` inscrit une adresse `git+ssh` dans le `package-lock.json`.
 
 `.oxlintrc.json` du projet :
 
@@ -63,5 +65,5 @@ Elles faisaient partie de la catégorie `suspicious`. Ne pas les rajouter sans r
 
 1. Modifier `base.json` ou `react.json` (les règles restent triées), puis `npm test`.
 2. Essayer dans les trois projets avant de publier : lier ce dossier dans `node_modules/@taraxe/oxlint-config` et lancer leur lint.
-3. Monter la version dans `package.json`, fusionner, puis poser le tag `v<version>` sur ce commit.
-4. Dans chaque projet, pointer la dépendance sur le nouveau tag, avec les corrections que la règle demande.
+3. Monter la version dans `package.json`, ajouter la ligne du `CHANGELOG.md`, fusionner, puis poser le tag `v<version>` sur ce commit.
+4. Dans chaque projet, pointer la dépendance sur le nouveau commit, avec les corrections que la règle demande.
