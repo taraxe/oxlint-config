@@ -2,6 +2,7 @@
   "name": "@taraxe/oxlint-config",
   "version": "0.1.0",
   "description": "Règles oxlint communes aux projets Taraxe : une base TypeScript et une surcouche React.",
+  "license": "MIT",
   "repository": "github:taraxe/oxlint-config",
   "type": "module",
   "files": [
@@ -22,5 +23,8 @@
   "devDependencies": {
     "oxlint": "1.94.0",
     "oxlint-tsgolint": "7.0.2007"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
